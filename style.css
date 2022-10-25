@@ -1,0 +1,93 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Helvetica;
+}
+body {
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.chart {
+  width: 95vw;
+  height: 95vh;
+  min-width: 280px;
+  min-height: 280px;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0 0 100px white;
+  border: 1px solid #553add;
+  align-self: center;
+  position: relative;
+  background: white;
+  padding: 20px;
+  font-size: 1.5rem;
+}
+#title {
+  font-size: min(35px, max(4vw, 25px));
+  font-weight: 500;
+  position: absolute;
+  width: calc(100% - 40px);
+  text-align: center;
+  margin: auto;
+  color: #553add;
+}
+#description {
+  font-size: min(25px, max(2vw, 20px));
+  font-weight: 500;
+}
+
+svg {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  background-color: tranparent;
+  width: 100vw;
+  height: 100vh;
+  transform: scale(1);
+  z-index: 0;
+}
+
+#x-axis, #y-axis {
+  color: #553add
+}
+
+#x-axis path, #y-axis path {
+  stroke: #553add;
+  stroke-width: 1;
+  fill: transparent;
+}
+.axis-titles {
+  text-anchor: middle;
+  font-size: 0.8rem;
+  fill: #553add;
+}
+
+#tooltip {
+  transition: 0.4s;
+  background-color: rgba(255, 255, 255, 0.9);
+  position: absolute;
+  pointer-events: none;
+  font-size: 0.66rem;
+  border-radius: 0.2rem;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  text-align: left;
+  padding: 0.3rem;
+  line-height: 1rem;
+  border: 1px solid #553add;
+  z-index: 1;
+}
+
+#legend {
+  color: #553add;
+}
+
+.county:hover {
+  fill: red;
+}
